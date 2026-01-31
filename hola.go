@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 
 	"rsc.io/quote"
 )
@@ -11,14 +10,19 @@ func main() {
 	fmt.Println("Hola Mundo")
 	fmt.Println(quote.Go())
 
-	s := "100"
-	i, _ := strconv.Atoi(s)
+	var name string
+	var age int
 
-	fmt.Println(i + 1)
+	fmt.Println("What is your name?")
+	fmt.Scanln(&name)
 
-	n := 42
-	s = strconv.Itoa(n)
+	fmt.Println("What is your age?")
+	fmt.Scanln(&age)
 
-	fmt.Println(s)
+	fmt.Printf("Hola me llamo, %s y tengo %d!\n", name, age)
+
+	greeting := fmt.Sprintf("Hola me llamo, %s y tengo %d!", name, age)
+
+	fmt.Println(greeting)
 
 }
