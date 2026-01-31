@@ -2,27 +2,18 @@ package main
 
 import (
 	"fmt"
-
-	"rsc.io/quote"
+	"math"
 )
 
 func main() {
-	fmt.Println("Hola Mundo")
-	fmt.Println(quote.Go())
+	a := 10
+	b := 3
 
-	var name string
-	var age int
+	fmt.Println("Suma: ", a+b)
+	fmt.Println("Resta: ", a-b)
+	fmt.Println("Division: ", a/b)
+	fmt.Println("Lo otro: ", a%b)
 
-	fmt.Println("What is your name?")
-	fmt.Scanln(&name)
-
-	fmt.Println("What is your age?")
-	fmt.Scanln(&age)
-
-	fmt.Printf("Hola me llamo, %s y tengo %d!\n", name, age)
-
-	greeting := fmt.Sprintf("Hola me llamo, %s y tengo %d!", name, age)
-
-	fmt.Println(greeting)
-
+	fmt.Println(math.Pi)
+	
 }
