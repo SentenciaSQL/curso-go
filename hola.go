@@ -2,38 +2,24 @@ package main
 
 import (
 	"fmt"
-
-	"rsc.io/quote"
-)
-
-// Declaracion de constantes
-const Pi float32 = 3.141592653589793
-
-const (
-	x = 100
-	y = 0b100
-	z = 0o12
-	w = 0xFF
-)
-
-const (
-	Domingo = iota + 1
-	Lunes
-	Martes
-	Miercoles
-	Jueves
-	Viernes
-	Sabado
+	"math"
 )
 
 func main() {
-	fmt.Println("Hola Mundo")
-	fmt.Println(quote.Go())
+	var lado1, lado2 float64
+	const precision = 2
 
-	// Declaracion de variables
-	var firstName, lastName, age = "Jane", "Doe", 23
+	fmt.Print("Introduzca lado1: ")
+	fmt.Scanln(&lado1)
 
-	fmt.Println(firstName, lastName, age)
+	fmt.Print("Introduzca lado2: ")
+	fmt.Scanln(&lado2)
 
-	fmt.Println(x, w, y, z)
+	area := (lado1 * lado2) / precision
+	hipotenusa := math.Sqrt(math.Pow(lado1, precision) + math.Pow(lado2, precision))
+	perimetro := lado1 + lado2 + hipotenusa
+
+	fmt.Printf("\nArea: %.*f", precision, area)
+	fmt.Printf("\nPerimetro: %.*f", precision, perimetro)
+
 }
